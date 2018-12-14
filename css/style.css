@@ -2,22 +2,16 @@
 	--righteous-font: 'Roboto', cursive;
 }
 
-body {
-    min-height: 100vh;
-    z-index: -10;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-size: 1.3rem;		    
+.body{
+	background-color: #4F4E48;
 }
-.hero {
+
+.main {
 	position: absolute;
     min-height: 100vh;
     min-width: 100vw;
     top: 0;
     bottom: 0;
-    background-color: #4F4E48;
 }
 
 h1 {
@@ -32,10 +26,8 @@ h1 {
 	font-family: var(--righteous-font);
 }
 ul {
-	/*border-top: 2px solid white;*/
 	margin-top: 2rem;
 	list-style: none;
-	/*display: none;*/
 }
 li {
 	border-bottom: 1px solid white;

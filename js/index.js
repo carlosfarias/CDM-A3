@@ -1,16 +1,3 @@
-
-/*<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js">
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDRp22Osgy3kXRDOOFq4rQKw-9mb3uIeCU",
-    authDomain: "a3-lista-de-tarefas.firebaseapp.com",
-    databaseURL: "https://a3-lista-de-tarefas.firebaseio.com",
-    projectId: "a3-lista-de-tarefas",
-    storageBucket: "a3-lista-de-tarefas.appspot.com",
-    messagingSenderId: "294990077965"
-  };
-  firebase.initializeApp(config);*/
-
 window.onload = function() {
 	var form = document.getElementById("form");
 	var input = document.getElementById("input");
@@ -101,3 +88,15 @@ window.onload = function() {
 		list.style.borderTop = "";
 	}
 }
+
+<script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js">
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDRp22Osgy3kXRDOOFq4rQKw-9mb3uIeCU",
+    authDomain: "a3-lista-de-tarefas.firebaseapp.com",
+    databaseURL: "https://a3-lista-de-tarefas.firebaseio.com",
+    projectId: "a3-lista-de-tarefas",
+    storageBucket: "a3-lista-de-tarefas.appspot.com",
+    messagingSenderId: "294990077965"
+  };
+  firebase.initializeApp(config);
