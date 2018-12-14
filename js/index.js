@@ -12,39 +12,31 @@
   firebase.initializeApp(config);*/
 
 window.onload = function() {
-	//variables
 	var form = document.getElementById("form");
 	var input = document.getElementById("input");
 	var btn = document.getElementById("btn");
 	var list = document.getElementById("list");	
 	var btnClr = document.getElementById("btnClr");	
 	var id = 1;
-	// listItem = {item: "todo item", checked: flase}
 	var liItem = "";
 	var todoList = [];
 
-	//button event listener
-	btn.addEventListener("click", addTodoItem);
+	btn.addEventListener("click", addItem);
 
-	//list event listener
 	list.addEventListener("click", boxChecked);
 
-	//event listener for clear list
 	btnClr.addEventListener("click", clearList);
 
 	if(localStorage.length <= 0) {
-		btnClr.style.display = "none"; //hide clear btn	
+		btnClr.style.display = "none"; 
 		console.log("button");
 	}
 
-	//checking localstorage has data
 	if(localStorage.length > 0) {
 		displayList();
 	}
 
-
-	//add todo item to list
-	function addTodoItem() {
+	function addItem() {
 		if(input.value === "") {
 			alert("You must enter some value!");
 		}
@@ -65,7 +57,6 @@ window.onload = function() {
 		}
 	}
 
-	//adding string through style to list itme
 	function boxChecked(event) {
 		const element = event.target;
 		if(element.type === "checkbox") {
@@ -76,7 +67,6 @@ window.onload = function() {
 		}
 	}
 
-	//adding data to local storage
 	function addToLocalStorage() {
 		if(typeof(Storage) !== "undefined") {
 			localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -86,7 +76,6 @@ window.onload = function() {
 		}
 	}
 
-	//display all todo list
 	function displayList() {
 		list.style.borderTop = "2px solid white";
 		todoList = JSON.parse(localStorage.getItem("todoList"));
@@ -95,7 +84,6 @@ window.onload = function() {
 			var text = element.item;
 			var item = `<li id="li-${id}">${text}<input id="box-${id}" class="checkboxes" type="checkbox"></li>`;
 			list.insertAdjacentHTML("beforeend", item);
-			//if we got a checked box, then style
 			if(element.checked) {
 				var li = document.getElementById("li-"+id);
 				li.style.textDecoration = "line-through";
@@ -105,7 +93,6 @@ window.onload = function() {
 		});
 	}
 
-	//clear list event listener
 	function clearList() {
 		todoList = [];
 		localStorage.clear();
