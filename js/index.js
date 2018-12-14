@@ -90,7 +90,7 @@ window.onload = function() {
 }
 
 <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js">
-  // Initialize Firebase
+
   var config = {
     apiKey: "AIzaSyDRp22Osgy3kXRDOOFq4rQKw-9mb3uIeCU",
     authDomain: "a3-lista-de-tarefas.firebaseapp.com",
